@@ -22,9 +22,11 @@ module tb ();
   wire [7:0] uo_out;
   wire [7:0] uio_out;
   wire [7:0] uio_oe;
+  
+  wire uart_tx = uo_out[4];
 
   // Replace tt_um_example with your module name:
-  tt_um_example user_project (
+  tt_um_autosel user_project (
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out (uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
