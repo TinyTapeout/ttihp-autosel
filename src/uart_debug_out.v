@@ -53,6 +53,8 @@ module uart_debug_out (
     if (!rst_n) begin
       counter <= 0;
       send_index <= 0;
+      tx_byte <= 0;
+      tx_valid <= 0;
     end else begin
       counter <= counter + 1;
       if (counter == CLK_FREQ * 1000000) begin
